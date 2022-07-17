@@ -1,0 +1,93 @@
+body{
+    margin: 0%;
+    padding: 0%;
+    background-position: center;
+    background-size: cover;
+    background-image: url("https://www.elegantthemes.com/blog/wp-content/uploads/2017/06/Learn-Javascript.jpg");
+}
+.main{
+    width: 520px;
+    padding: 25px;
+    padding-bottom: 450px;
+    background-color: rgb(204, 206, 93);
+    position: absolute;
+    left: 33%;
+    top: 0%;
+    border: 2px solid blue;
+    
+}
+h1{
+    clear:white;
+    text-align: center;
+
+    text-shadow: cornsilk;
+    color: crimson;
+    padding: auto;
+}
+p{
+    text-align: center;
+}
+
+   
+.two{
+    width: 500px;
+    height: 30px;
+    margin-bottom: 24px;
+}
+.two input{
+    width: 500px;
+    height: 30px;
+    margin-bottom: 2px;
+}
+
+
+.three{
+    width: 500px;
+    height: 30px;
+    margin-bottom: 2px;
+}
+
+.three input{
+    width: 222px;
+    height: 30px;
+    margin-bottom: 2px;
+}
+
+.four{
+width: 500px;
+height: 30px;
+margin-bottom: 2px;
+}
+
+
+
+
+.four input{
+    width: 200px;
+    height: 30px;
+    margin-bottom: 2px;
+
+}
+.five input{
+    width: 510px;
+    height: 30px;
+    margin-bottom: 2px;
+    padding:10px ;
+    font-size: medium;
+    color: rgb(67, 13, 117);
+    background-color: chartreuse;
+    text-align: center;
+    font-style: italic;
+    
+
+}
+.items{
+    
+    width :550px;
+    height: 200px;
+    background-color: rgb(199, 199, 186);
+    position: absolute;
+    left: 33%;
+    top: 66%;
+    
+}
