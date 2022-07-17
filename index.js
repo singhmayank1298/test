@@ -98,4 +98,74 @@ submit.appendChild(li)
 }
 }
 
+// DELETE FUNCTION
+
+// 1=when click it will check that classname have (det )or not if yes
+// 2= grap the parentnode and there id ==
+// 3 = remove  parentnode and remove from localStorage by grap id
+// 4= localStorage will grap key by (id) of parentnode 
+
+let submit=document.querySelector(".item")
+
+submit.addEventListener("click",deleteli) 
+
+
+function deleteli(e){
+e.preventDefault()
+//console.log("fokddd")
+if(e.target.classList.contains("det")){
+let a= e.target.parentElement
+console.log(a.id)
+localStorage.removeItem(a.id)
+submit.removeChild(a)
+}
+}
+
+
+// EDIT
+
+// 1=when click it will check that classname have (edt )or not if yes
+// 2= grap the node from locslstroge  in obj form (use JSON.parse to make object and to grap use parentnode id)
+// 3= set form value 
+// 4= then remove parent node from UL and remove from localStorage by parentnode id
+
+
+
+let lil= document.querySelector("li")
+console.log(lil)
+
+submit.addEventListener("click",edi)
+
+
+function edi(e){
+e.preventDefault()
+// console.log(e.path[5])
+if(e.target.classList.contains("edt")){
+
+let s=localStorage.getItem( e.target.parentElement.id)
+let obj = JSON.parse(s)
+
+inputname.value=obj.name
+inputphone.value=obj.phone
+inputemail.value=obj.email
+ let a= e.target.parentElement
+ console.log(a.id)
+ localStorage.removeItem(a.id)
+    submit.removeChild(a)
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
