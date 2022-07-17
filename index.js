@@ -13,6 +13,16 @@ let h=document.querySelector('h1')
 // 1=when click on submit make a Object and store info.. on it
 // 2=store the object in localStorage by useing JSON.stringify and make ther value by inputphone.value
 
+// task 11 display in screen
+// 1= grap UL 
+// 2=make new li and delete and edit button and 
+// 3= make id or classname as inputphone.val  for li and for buttons (det& edt)
+// 4= check if in the list the node is exist or not first if exist then remove the node then push new one5
+// 5= push button to li and li to grap UL
+
+
+
+
 myform.addEventListener("submit", function sub (event){
   event.preventDefault() 
        console.log(event.target)
@@ -23,4 +33,37 @@ myform.addEventListener("submit", function sub (event){
       let obj = JSON.stringify({"name":inputname.value , "email":inputemail.value,"phone":inputphone.value,"date":inputdate.value,"time":inputtime.value })
       localStorage.setItem(inputphone.value,obj)
 
-})
+      let submit=document.querySelector(".item")
+
+ let grapid =document.getElementById(inputphone.value)
+ if(grapid!=null){
+   submit.removeChild(grapid)
+ }
+ 
+ 
+ let li =document.createElement("li")
+ let deleteButton =document.createElement("button")
+ let editButton =document.createElement("button")
+ deleteButton.innerText="delete"
+ deleteButton.className="det"
+ editButton.innerText="edit"
+ editButton.className="edt"
+ li.id=inputphone.value
+ //let user =JSON.parse(  localStorage.getItem(inputphone.value) )
+ let node1 =document.createTextNode(inputname.value+ " "+ inputemail.value+" "+inputphone.value+" "+inputtime.value)
+ //let node2 =document.createTextNode()
+
+ //console.log(inputemail.value)
+ 
+ li.appendChild(node1)
+ li.appendChild(deleteButton)
+ li.appendChild(editButton)
+ submit.appendChild(li)
+
+ alert("YOUR FORM IS SUBMITED")  
+
+
+}
+
+);
+
