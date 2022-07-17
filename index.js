@@ -61,9 +61,41 @@ myform.addEventListener("submit", function sub (event){
  submit.appendChild(li)
 
  alert("YOUR FORM IS SUBMITED")  
+});
 
+//REFRESH THE PAGE
+
+// 1=first grap from the localstorage all values in Array
+// 2= start iterating the array  
+// 3= make li and delete and edit button and make id,classname as per above  (id shuld be .phone)
+// 4=insert text in li by localstorage  values
+// 5= grap UL and then insert li in it 
+
+
+document.addEventListener("DOMContentLoaded",relode)
+function relode(e){
+console.log(h)
+
+let valuearr=Object.values(localStorage)
+
+for (let i=0;i<valuearr.length;i++){
+let li =document.createElement("li")
+let node =document.createTextNode(JSON.parse(valuearr[i]).name+" "+JSON.parse(valuearr[i]).email+" "+JSON.parse(valuearr[i]).phone)
+li.appendChild(node)
+let submit=document.querySelector(".item")
+let delet=document.createElement("button")
+let edit=document.createElement("button")
+delet.innerText="Delete"
+edit.innerText="Edit"
+delet.className="det"
+edit.className="edt"
+li.id= JSON.parse(valuearr[i]).phone
+li.appendChild(delet)
+li.appendChild(edit)
+submit.appendChild(li)
+// console.log(li)
 
 }
+}
 
-);
 
