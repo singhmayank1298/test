@@ -13,6 +13,11 @@ multiplyby3(3)
 
 
 
+
+
+
+
+
 ///using clouser
 
 let multiply1=function (x){
